@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Travel Buddy</a></div>
+            <ul class="links">
+                <li><a href="Home">Home</a></li>
+                <li><a href="Services">Services</a></li>
+                <li><a href="Contact">Contact</a></li>
+                <li><a href="AboutUs">About Us</a></li>
+            </ul>
+            <div class="toogle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="drop-down-menu">
+            <li><a href="Home">Home</a></li>
+            <li><a href="Services">Services</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li><a href="AboutUs">About Us</a></li>
+        </div>
+    </header>
+    <br><br>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="img-container">
+                <a href="#Jaipur"><img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFpcHVyfGVufDB8fDB8fHww" alt="Jaipur" id="image1"></a>
+                <a href="#Varnasi"><img src="varnasi.jpeg" alt="Varnasi" id="image2"></a>
+                <a href="#Ladakh"><img src="https://media.istockphoto.com/id/1046313926/photo/indian-bikers-travel-on-national-highway-with-scenic-landscape-at-ladakh-india.webp?b=1&s=170667a&w=0&k=20&c=OFdL3Hjx2VREK_Q_TcwdJptKPWNwSLRNgbplieXCccI=" alt="Leh-Ladakh" id="image3"></a>
+                <a href="#Kerala"><img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a2VyYWxhfGVufDB8fDB8fHww" alt="Kerala" id="image4"></a>
+            </div>
+            <div class="btn btn-left"><ion-icon class='icon' name="arrow-back-outline"></ion-icon></div>
+            <div class="btn btn-right"><ion-icon class='icon' name="arrow-forward-outline"></ion-icon></div>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="container" id="Jaipur">
+        <h3> Jaipur, Rajasthan </h3>
+        <p> Known as the Pink City, Jaipur is a vibrant blend of history, culture, and architectural marvels.<br>
+            Explore the majestic Amber Fort, admire the intricate details of Hawa Mahal (Palace of Winds), 
+            and wander through the bustling bazaars of the old city. Jaipur also offers a glimpse into India's royal past with its opulent palaces and magnificent gardens. <br>
+            Don't miss the delicious Rajasthani cuisine and traditional folk performances that add to the city's charm.</p>
+    </div>
+
+    <br><br>
+    <div class="container" id="Varnasi">
+        <h3> Varanasi, Uttar Pradesh </h3>
+        <p> Varanasi, one of the oldest inhabited cities in the world, is a spiritual hub on the banks of the sacred River Ganges.<br>
+            Witness the mesmerizing Ganga Aarti ceremony at Dashashwamedh Ghat, stroll through narrow alleys dotted with ancient temples, and experience the serenity of boat rides along the river.<br>
+            Varanasi is also renowned for its rich cultural heritage, vibrant ghats, and bustling markets offering everything from silk sarees to exquisite handicrafts.</p>
+    </div>
+    <br><br>
+
+    <div class="container" id="Ladakh">
+        <h3> Leh-Ladakh, Jammu and Kashmir </h3>
+        <p> Nestled amidst the towering Himalayas, Leh-Ladakh is a paradise for adventure seekers and nature lovers alike.<br>
+            Marvel at the breathtaking landscapes dotted with azure lakes, barren mountains, and ancient monasteries. Explore the historic Leh Palace, embark on thrilling treks to remote villages, and witness the surreal beauty of Pangong Lake, featured in the movie "3 Idiots."<br>
+            Leh-Ladakh also offers opportunities for biking, river rafting, and camping under the starlit sky, making it an unforgettable destination for those seeking an offbeat experience..</p>
+    </div>
+
+    <br><br>
+    <div class="container" id="Kerala">
+        <h3> Kerala Backwaters </h3>
+        <p> Explore the tranquil backwaters of Kerala, a network of interconnected canals, rivers, and lagoons fringed by lush greenery and swaying palm trees.<br>
+            Cruise along the serene Alleppey backwaters on traditional houseboats known as "kettuvallams," and soak in the mesmerizing views of rural life unfolding along the banks. Experience the therapeutic benefits of Ayurvedic treatments, indulge in delectable seafood delicacies, and witness colorful Kathakali performances showcasing Kerala's vibrant culture.<br>
+            The backwaters of Kerala offer a peaceful retreat away from the hustle and bustle of city life, perfect for rejuvenating the mind, body, and soul.</p>
+    </div>
+
+    <script src = "main.js"></script>
+    <script>
+        const toggle = document.querySelector('.toogle-btn');
+        const toggleIcon = document.querySelector('.toogle-btn i');
+        const menu = document.querySelector('.drop-down-menu');
+    
+        toggle.onclick = function (){
+            menu.classList.toggle('open');
+            const isOpen = menu.classList.contains('open');
+            toggleIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
